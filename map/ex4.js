@@ -50,11 +50,26 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
   }
 ]
 */
+const getCircumference = (radius) => {
+  circumference = 2 * Math.PI * radius;
+  return circumference.toFixed(3)
+}
+
+const getSurface = (radius) => {
+  surface = Math.PI * radius * radius;
+  return surface.toFixed(3)
+}
 
 function getCirclesProperties(radiuses) {
-  return radiuses.map(radius => {
-
+  const newArray = []
+  radiuses.map(radius => {
+    const newObj = { radius: radius };
+    console.log(newObj);
+    newObj["circumference"] = getCircumference(radius);
+    newObj["surface"] = getSurface(radius);
+    newArray.push(newObj);
   });
+  return newArray
 }
 
 //.toFixed Method:
