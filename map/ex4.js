@@ -52,9 +52,13 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+  return radiuses.map(radius => {
+
+  });
 }
 
-
+//.toFixed Method:
+// propriety.toFixed(number of desired decimals)
 
 // Ne pas modifier l'export
 module.exports = getCirclesProperties;
